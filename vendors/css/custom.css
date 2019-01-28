@@ -1,0 +1,15 @@
+@media (min-width: 992px) {
+    .bg-navbar-default {
+        background-color: transparent !important;
+        padding: 30px;
+        transition-duration: 0.6s;
+    }
+    .bg-navbar-default a{
+        color: whitesmoke !important;
+    }
+
+}
+.bg-light-custom {
+    background: #f8f9fa;
+    transition-duration: 0.6s;
+}
