@@ -21,6 +21,7 @@ $(window).resize(function(){
         $('#logo').attr('src','./vendors/images/logo.png');
     }else if($(window).scrollTop() <= 50){
         $('#logo').attr('src','./vendors/images/logo-white.png');
+        $('#navbar').addClass('bg-navbar-default');
         $(window).scroll(function(){
             var conditionNav = $(window).scrollTop() <= 50;
             if(!conditionNav && $(window).width() >= 992){
