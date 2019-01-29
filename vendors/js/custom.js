@@ -6,11 +6,29 @@ $(document).ready(function(){
         $('#logo').attr('src','./vendors/images/logo-white.png');
         $(window).scroll(function(){
             var conditionNav = $(window).scrollTop() <= 50;
-            $('#navbar').toggleClass('bg-navbar-default',conditionNav);
-            if(!conditionNav){
+            if(!conditionNav && $(window).width() >= 992){
                 $('#logo').attr('src','./vendors/images/logo.png');
-            }else{
+                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
+            }else if($(window).width() >= 992){
                 $('#logo').attr('src','./vendors/images/logo-white.png');
+                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
+            }
+        })
+    }
+})
+$(window).resize(function(){
+    if($(window).width() < 992){
+        $('#logo').attr('src','./vendors/images/logo.png');
+    }else if($(window).scrollTop() <= 50){
+        $('#logo').attr('src','./vendors/images/logo-white.png');
+        $(window).scroll(function(){
+            var conditionNav = $(window).scrollTop() <= 50;
+            if(!conditionNav && $(window).width() >= 992){
+                $('#logo').attr('src','./vendors/images/logo.png');
+                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
+            }else if($(window).width() >= 992){
+                $('#logo').attr('src','./vendors/images/logo-white.png');
+                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
             }
         })
     }
