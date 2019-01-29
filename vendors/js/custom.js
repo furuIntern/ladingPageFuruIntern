@@ -34,4 +34,10 @@ $(document).ready(function () {
             })
         }
     })
+    var timeDelay = 0;
+    $(".linecode").each(function(){
+    $(this).children("h3").text(0);
+    $(this).attr('data-aos-delay',timeDelay*50);
+    timeDelay++;
+    })
 })
