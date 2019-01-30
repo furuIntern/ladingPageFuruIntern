@@ -13,3 +13,132 @@
     background: #f8f9fa;
     transition-duration: 0.6s;
 }
+@media only screen and (max-width: ){
+
+}
+.list_blog , .list_inline{
+    list-style-type: none;
+    padding: 0;
+    line-height: 2rem; 
+}
+.list_blog_item{
+    margin-bottom: 13px;
+}
+.list_blog_image{
+    float: left;
+    width:60px;
+    height: 60px;
+}
+.horizon{
+    border-bottom: 1px solid #807b7b;
+    padding-top:15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+.icon{
+    font-size: 40px;
+    padding-right:5px;
+    padding-left: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top:5px;
+    display: inline-block;
+    
+}
+.list_inline_item{
+    margin-right:15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.box_date{
+    background-color:#1992e2;
+    display: inline-block;
+    width: 4rem;
+}
+.day , .month{
+    outline-color: #807b7b;
+    color: #ffffff;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+.year{
+    color: #807b7b;
+    position: absolute;
+    font-size:1rem;
+    padding-left: 0.8rem;
+}
+.mr_left{
+    margin-left: 90px;
+}
+.input_search{
+    width:100%;
+    border-top: 1px solid #807b7b;
+    border-right: 1px solid #807b7b;
+    border-left: 3px solid #1992e2;
+    border-bottom: 1px solid #807b7b;
+    display: inline-block;
+    position: relative; 
+}
+.input_text{
+    border: transparent;
+    float: left;
+    width: 90%;
+    background-color: #ffffff;
+}
+.button_search{
+    background-color:transparent;
+    border: none;
+    width: 10%;
+    margin:0;
+    padding:0;
+    position: absolute;
+}
+button:hover , a:hover{
+    color: #1678b9;
+    border: none;
+    
+}
+.title{
+    width: 100%;
+}
+.box_image {
+    overflow: hidden !important;
+}
+.box_image_min{
+    overflow: hidden !important;
+    padding: 0 ;
+    margin-left: 50px;
+}
+#image{
+    background-position: center center;
+    background-size: cover;
+    max-width: 100%;
+}
+.image{
+    max-width: 100%;
+   
+}
+.img_cate{
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+}
+.mr_top{
+    margin-top:300px;
+}
+.mr_left_min{
+    margin-left: 25px;
+}
+.tag_list{
+    border: 1px solid #807b7b;
+    background-color:#807b7b;
+    color: #f8f9fa;
+    padding: 5px;
+    margin: 0px 5px 5px 0px; 
+    display: inline-block;
+}
+i, a{
+    color:#1ac6ff;
+    text-decoration: none !important;
+}
