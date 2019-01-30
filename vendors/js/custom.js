@@ -40,4 +40,21 @@ $(document).ready(function () {
     $(this).attr('data-aos-delay',timeDelay*50);
     timeDelay++;
     })
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        autoplay:true,
+        autoplayTimeout: 1500,
+        autoplayHoverPause:true,
+        responsiveClass:true,
+        loop:true,
+        dots:false,
+        responsive:{
+            0:{
+                items:2 ,
+            },
+            992:{
+                items:5,
+            }
+        }
+    });
 })
