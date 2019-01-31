@@ -107,3 +107,13 @@
 #space{
     height: 56px;
 }
+#emailFooter:focus{
+    outline: 2px solid rgba(248, 23, 23, 0.836);
+}
+#formContact input[type='text']{
+    border: 1px rgb(145, 145, 145) solid;
+    width: 100%;
+}
+.error{
+    color: rgba(255, 0, 0, 0.733);
+}
