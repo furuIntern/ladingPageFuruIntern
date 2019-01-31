@@ -19,7 +19,7 @@
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light-custom fixed-top">
             <div class="container ">
                 <div class="navbar-brand">
-                    <img id="logo"src="./vendors/images/logo.png" width="100%"alt="">
+                    <img id="logo"src="" width="100%"alt="">
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false"
                     aria-controls="#navbarNav">
@@ -41,7 +41,7 @@
         <!--End navbar-->
 
 
-    <div id="space" class="responsive"></div>
+    <div id="space"></div>
     <img src="./vendors/images/head.jpg" alt="" width="100%">
     <div id="ourcompany" class="container my-4 text-center ">
         <h1>Our company</h1>
@@ -201,7 +201,6 @@
         <div><img src="./vendors/images/stark-industries.png" width="100%"></div>
     </div>
 
-
     <!--Footer-->
     <div class="container-fluid">
         <div class="row bg-dark px-5 py-3">
@@ -235,12 +234,14 @@
             </div>
             <div class="col-lg-3">
                 <h5 class="text-white">Subscribe to Our Newsletter</h5>
-                <div class="input-group">
-                    <input type="text" class="form-control bg-secondary">
-                    <div class="input-group-append">
-                        <span class="input-group-text text-white bg-secondary">Send</span>
-                    </div>
-                </div>
+                
+                    <form class="input-group">
+                        <input name="email" type="text" class="form-control bg-secondary">
+                        <div class="input-group-append">
+                            <input type="submit" class="btn btn-secondary" style="border:1px solid white" value="Send">
+                        </div>
+                    </form>
+                    <div></div>
             </div>
         </div>
         <div class="row py-3" style="background:rgb(54, 53, 53)">
@@ -254,11 +255,12 @@
     </div>
     <!--End Footer-->
 
-
+    <!--Cript-->
     <script src="./vendors/js/jquery-3.3.1.min.js"></script>
     <script src='./vendors/js/owl.carousel.min.js'></script>
     <script src="./vendors/js/bootstrap.min.js"></script>
     <script src="./vendors/js/aos.js"></script>
+    <script src="./vendors/js/jquery.validate.min.js"></script>
     <script src="./vendors/js/animate.js"></script>
     <script src="./vendors/js/custom.js"></script>
 

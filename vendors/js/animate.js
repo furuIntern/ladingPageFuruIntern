@@ -5,9 +5,11 @@ AOS.init({
 })
 AOS.refresh();
 
+//Use aos library
 document.addEventListener('aos:in:line-code', ({detail}) => {
+
+    //Animation increase code line
     var x=0;
-    
     var icrease = setInterval(increaseX,1);
     function increaseX(){
         
@@ -19,6 +21,8 @@ document.addEventListener('aos:in:line-code', ({detail}) => {
         }
     }
   });
+
+  //Animation increas progress bar
   document.addEventListener('aos:in:achieved',function({detail}){
       var x = 0;
       var icrease = setInterval(increaseX,10);
@@ -33,6 +37,8 @@ document.addEventListener('aos:in:line-code', ({detail}) => {
           }
       }x
   })
+
+
 $(document).ready(function () {
     var timeDelay = 0;
     $(".linecode").each(function(){
@@ -40,6 +46,8 @@ $(document).ready(function () {
     $(this).attr('data-aos-delay',timeDelay*50);
     timeDelay++;
     })
+
+    //Hover img
     $(".owl-carousel").owlCarousel({
         loop:true,
         autoplay:true,
@@ -57,4 +65,38 @@ $(document).ready(function () {
             }
         }
     });
+
+    //Animation navbar
+    //Set default
+    function setDefault(){
+        //Set navbar
+        if($(window).width() >= 992){
+            $('#space').addClass('d-none');
+            if($(window).scrollTop() < 45 ){
+                $('#navbar').addClass('navbar-default');
+            }else{
+                $('#navbar').removeClass('navbar-default')
+            }
+        }else{
+            $('#space').removeClass('d-none');
+            $('#navbar').removeClass('navbar-default')
+        }
+
+        //Set logo
+        if($('#navbar').hasClass('navbar-default')){
+            $('#logo').attr('src','./vendors/images/logo-white.png');
+        }else{
+            $('#logo').attr('src','./vendors/images/logo.png')
+        }
+    }
+    setDefault();
+    $(window).resize(function(){
+        setDefault();
+    });        
+
+    //Set when sroll
+    $(window).scroll(function(){
+        setDefault();
+    })
 })
+
