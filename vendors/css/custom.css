@@ -117,3 +117,7 @@
 .error{
     color: rgba(255, 0, 0, 0.733);
 }
+#btb{
+    background: #686868bd;
+    color: white;
+}
