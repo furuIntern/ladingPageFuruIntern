@@ -98,5 +98,13 @@ $(document).ready(function () {
     $(window).scroll(function(){
         setDefault();
     })
+
+    
+    //Linkscroll
+    $("#navbar a").click(function(){
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 56,
+        }, 500);
+    })
 })
 
