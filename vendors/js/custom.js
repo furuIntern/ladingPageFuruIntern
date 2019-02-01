@@ -1,36 +1,54 @@
+$(document).ready(function () {
 
-$(document).ready(function(){
-    if($(window).width() < 992){
-        $('#logo').attr('src','./vendors/images/logo.png');
-    }else{
-        $('#logo').attr('src','./vendors/images/logo-white.png');
-        $(window).scroll(function(){
-            var conditionNav = $(window).scrollTop() <= 50;
-            if(!conditionNav && $(window).width() >= 992){
-                $('#logo').attr('src','./vendors/images/logo.png');
-                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
-            }else if($(window).width() >= 992){
-                $('#logo').attr('src','./vendors/images/logo-white.png');
-                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
-            }
-        })
+
+  //Validation form footer
+  $("#formFooter").validate({
+    errorLabelContainer:"#formFooter+.box-valid",
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      }
+    },
+    messages: {
+      email: {
+        required: "Email is required",
+        email: "Email must be like format example@domain.com"
+      }
     }
-})
-$(window).resize(function(){
-    if($(window).width() < 992){
-        $('#logo').attr('src','./vendors/images/logo.png');
-    }else if($(window).scrollTop() <= 50){
-        $('#logo').attr('src','./vendors/images/logo-white.png');
-        $('#navbar').addClass('bg-navbar-default');
-        $(window).scroll(function(){
-            var conditionNav = $(window).scrollTop() <= 50;
-            if(!conditionNav && $(window).width() >= 992){
-                $('#logo').attr('src','./vendors/images/logo.png');
-                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
-            }else if($(window).width() >= 992){
-                $('#logo').attr('src','./vendors/images/logo-white.png');
-                $('#navbar').toggleClass('bg-navbar-default',conditionNav);
-            }
-        })
+  });
+
+  //Validation form contact
+  $("#formContact").validate({
+    rules:{
+      name:"required",
+      email:{
+        required: true,
+        email: true
+      },
+      subject:"required",
+      message:{
+        minlength: 2,
+        required:true
+      }
     }
+  })
+  $(window).scroll(function(){
+    $('#btb').toggleClass('d-none',$(window).scrollTop() <= 50);
+  })
+  //Back to top
+  $('#btb').click(function(){
+    var pos = $(window).scrollTop();
+
+    function back(){
+      if(pos <=0){
+        clearInterval(scroll)
+      }else{
+        pos = pos - 50;
+        $(window).scrollTop(pos);
+      }
+    }
+    var scroll = setInterval(back,1);
+    
+  })
 })
