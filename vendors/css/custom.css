@@ -126,3 +126,22 @@
     bottom: 25px;
     z-index: 2;
 }
+.double-solid{
+    position: relative;
+    height: 10px;
+    width:  60px;
+    border: 2px solid #007bff;
+    border-right: 0;
+    border-left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.price button{
+    background: rgb(173, 173, 173);
+    color: black;
+    border: white;
+    width: 150px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
